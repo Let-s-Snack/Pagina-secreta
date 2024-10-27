@@ -1,0 +1,19 @@
+name: DeployReactAppAWS
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Deploy to staging
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.16'
+        
+    - name: Install Dependencies
+      run: npm install
