@@ -50,7 +50,7 @@ export const IA = () => {
     ) {
       setIsLoading(true);
       fetch(
-        "http://ec2-54-175-111-241.compute-1.amazonaws.com:8080/getResponse/",
+        "http://ec2-44-217-227-243.compute-1.amazonaws.com:8080/getResponse/",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
