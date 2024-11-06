@@ -13,11 +13,6 @@ jobs:
 
     steps:
 
-    - name: Set up Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.16'
-
 	  - name: Deploy na EC2
 			run: |
 			  echo "${{secrets.KEY_SSH_EC2}}" > private_key && chmod 400 private_key
