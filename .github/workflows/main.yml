@@ -19,7 +19,7 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build application
+    - name: Running application
       run: npm run dev
 
 	- name: Deploy na EC2
