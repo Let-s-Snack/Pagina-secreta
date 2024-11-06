@@ -14,7 +14,7 @@ A área restrita é um site desenvolvido para que a administração do Let's Sna
 
 Segue a documentação das rotas do site:
 
-### EndPoint: http://ec2-54-175-111-241.compute-1.amazonaws.com:8080/getResponse/
+### EndPoint: http://ec2-54-175-111-241.compute-1.amazonaws.com:8080/getResponse/](http://ec2-52-20-248-152.compute-1.amazonaws.com:3000
 
 - /login
 
@@ -29,7 +29,7 @@ Segue a documentação das rotas do site:
   - Função: Exibir o segundo gráfico relacionado a avaliações da ExpoTech.
 
 - /ia
-  - Função: Exibir um gráfico de IA relacionado à ExpoTech.
+  - Função: Exibir um formulário para verificar por IA se seria um possível usuário do APP
 
 ## Dependências
 
@@ -55,30 +55,20 @@ npm install
 - GitHub
 - EC2 AWS
 
-## Estrutura do Projeto
-
-```plaintext
-├── src
-│   ├── components
-│   ├── pages
-│   ├── services
-│   └── App.js
-└── README.md
-```
-
 ## Executando o Projeto
 
 Para iniciar o projeto localmente, use:
 
 ```bash
-npm start
+npm run dev
 ```
 
-O site estará disponível em `http://localhost:3000`.
+O site estará disponível em `http://localhost:3000](http://ec2-52-20-248-152.compute-1.amazonaws.com:3000/`.
 
 ## Autores
-
-- [@PedroSchettini](https://github.com/PedroSchettini)
+- [@Gustavo Teotônio](https://github.com/Gustavo-Teotonio)
+- [@Pedro Schettini](https://github.com/pedroschettini)
+- [@Artur Nascimento](https://github.com/arturnascimentosousa)
 
 ---
 
