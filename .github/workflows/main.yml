@@ -3,7 +3,7 @@ name: DeployReactAppAWS
 on:
   push:
     branches: [ "main", "develop"]
-  pull request:
+  pull_request:
     branches: ["develop", "main"]
 
 jobs:
