@@ -7,6 +7,7 @@ import { Bi2 } from "./pages/Bi2/index.tsx";
 import { MainPage } from "./pages/MainPage/index.tsx";
 import { LoginPage } from "./pages/Login/index.tsx";
 import { ErrorPage } from "./pages/ErrorPage/index.tsx";
+import { IA } from "./pages/IA/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     path: "/login",
     errorElement: <ErrorPage />,
     element: <LoginPage />,
+  },
+  {
+    path: "/ia",
+    errorElement: <ErrorPage />,
+    element: <IA />,
   },
 ]);
 

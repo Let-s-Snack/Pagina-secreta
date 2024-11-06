@@ -1,50 +1,85 @@
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Let's Snack - Área restrita
 
-Currently, two official plugins are available:
+A área restrita é um site desenvolvido para que a administração do Let's Snack possa analisar gráficos interativos e monitorar o desempenho e os dados do projeto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Realizar login de forma segura
+- Exibir gráficos interativos para análise
+- Navegar entre diferentes tipos de relatórios e gráficos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Rotas
 
-- Configure the top-level `parserOptions` property like this:
+Segue a documentação das rotas do site:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### EndPoint: http://ec2-54-175-111-241.compute-1.amazonaws.com:8080/getResponse/
+
+- /login
+
+  - Função: Realizar autenticação do usuário para acesso aos gráficos.
+
+- /
+
+  - Função: Exibir o primeiro gráfico relacionado a pesquisas de mercado.
+
+- /bi2
+
+  - Função: Exibir o segundo gráfico relacionado a avaliações da ExpoTech.
+
+- /ia
+  - Função: Exibir um gráfico de IA relacionado à ExpoTech.
+
+## Dependências
+
+Para executar este projeto, você precisará instalar as seguintes bibliotecas e ferramentas:
+
+### Node
+
+- Node 20.16 ou superior
+- antd
+- @ant-design/icons
+- styled-components
+- react-router-dom
+- react-dom
+
+Instale todas as dependências com o seguinte comando:
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Outras Ferramentas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- GitHub
+- EC2 AWS
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Estrutura do Projeto
+
+```plaintext
+├── src
+│   ├── components
+│   ├── pages
+│   ├── services
+│   └── App.js
+└── README.md
 ```
+
+## Executando o Projeto
+
+Para iniciar o projeto localmente, use:
+
+```bash
+npm start
+```
+
+O site estará disponível em `http://localhost:3000`.
+
+## Autores
+
+- [@PedroSchettini](https://github.com/PedroSchettini)
+
+---
+
+Essas adições ajudam a detalhar o uso e a estrutura do projeto, facilitando a leitura e compreensão para colaboradores.
