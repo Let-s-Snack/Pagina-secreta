@@ -19,4 +19,12 @@ jobs:
       run: npm install
 
     - name: Build application
-      run: npm run build
+      run: npm run dev
+
+	- name: Deploy na EC2
+			run: |
+			  echo "${{secrets.KEY_SSH_EC2}}" > private_key && chmod 400 private_key
+			  ssh -o StrictHostKeyChecking=no -i "private_key" ubuntu@ec2-52-20-248-152.compute-1.amazonaws.com "
+				cd /home/ubuntu/Pagina-secreta && 
+				git pull origin main &&
+				./executarPagina.sh"
