@@ -2,30 +2,18 @@ name: DeployReactAppAWS
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main"]
 
 jobs:
   build:
-    name: Deploy to staging
     runs-on: ubuntu-latest
 
     steps:
-
-    - name: Set up Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.16'
-        
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Running application
-      run: npm run dev
-
-	- name: Deploy na EC2
-			run: |
-			  echo "${{secrets.KEY_SSH_EC2}}" > private_key && chmod 400 private_key
-			  ssh -o StrictHostKeyChecking=no -i "private_key" ubuntu@ec2-52-20-248-152.compute-1.amazonaws.com "
-				cd /home/ubuntu/Pagina-secreta && 
-				git pull origin main &&
-				./executarPagina.sh "
+      - name: Deploy na EC2
+        run: |
+          echo "${{secrets.KEY_SSH_EC2}}" > private_key && chmod 400 private_key
+          ssh -o StrictHostKeyChecking=no -i "private_key" ubuntu@ec2-52-20-248-152.compute-1.amazonaws.com "
+          cd /home/ubuntu/Pagina-secreta && 
+          git pull origin main &&
+          tmux kill-session -t paginaRestritaSession &&
+          ./executarPagina.sh "
