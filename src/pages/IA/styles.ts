@@ -1,4 +1,4 @@
-import { Button, Input } from "antd";
+import { Button, Input, InputNumber } from "antd";
 import styled from "styled-components";
 
 export const Title = styled.h1`
@@ -8,12 +8,13 @@ export const Title = styled.h1`
 `;
 
 export const PageWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ef5b23;
+  padding: 5rem 0;
 `;
 
 export const FormWrapper = styled.div`
@@ -35,7 +36,7 @@ export const StyledInput = styled(Input)`
   }
 `;
 
-export const StyledInputPassword = styled(Input.Password)`
+export const StyledInputNumber = styled(InputNumber)`
   width: 100%;
   svg {
     color: #ef5b23;
@@ -45,4 +46,13 @@ export const StyledInputPassword = styled(Input.Password)`
 export const StyledButton = styled(Button)`
   background-color: #ef5b23;
   width: 100%;
+`;
+
+export const InputsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 `;
